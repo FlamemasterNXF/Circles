@@ -12,7 +12,7 @@ function numberReset(x){
     for(let i=0;i<x;i++) data.numbers[i] = D(1)
 }
 function mainLoop(){
-    diff = (Date.now()-data.time)
+    diff = (Date.now()-data.time)/1000
     data.time = Date.now()
     calcLoop()
     for(let i=0;i<data.numbers.length;i++) progress(i, data.numbers[i])
@@ -20,7 +20,8 @@ function mainLoop(){
     circleTextControls()
 }
 function calcLoop(){
-    gainNumber(D(0.1).times(effect))
+    let gain = D(1).times(effect)
+    gainNumber(gain.times(diff))
     calcCircleEffects()
 }
 function fixNumbers(){

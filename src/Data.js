@@ -3,7 +3,8 @@ const D = x => new Decimal(x)
 function getDefaultObject() {
     return {
         numbers: [D(0)],
-        textTriggers: [false, false]
+        textTriggers: [false, false],
+        time: Date.now(),
     }
 }
 let data = getDefaultObject()
