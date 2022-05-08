@@ -1,0 +1,23 @@
+.flexBox {
+    display: flex;
+    align-items: center;
+    place-content:center
+}
+.generalTexts{
+    color: white;
+    font-family: DosisLight;
+}
+.centeredTexts{
+    color: white;
+    font-family: DosisLight;
+    text-align: center;
+    animation: fadeIn normal 7s;
+}
+.layer{
+    position: absolute;
+    z-index: 1;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    99% {opacity:1;}
+}

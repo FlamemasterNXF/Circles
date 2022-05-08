@@ -1,0 +1,29 @@
+.container {
+    height: 400px;
+    width: 400px;
+    background-color: #000000;
+    border-radius: 8px;
+    place-items: center;
+    position: relative;
+    display: grid;
+}
+.circular-progress {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+.circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 84%;
+    width: 84%;
+    background-color: #000000;
+    border-radius: 50%;
+}
+.value-container {
+    position: relative;
+    color: #7e00b4;
+}
