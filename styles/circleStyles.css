@@ -9,8 +9,8 @@
 }
 .circular-progress {
     position: relative;
-    height: 160px;
-    width: 160px;
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
     display: grid;
     place-items: center;
