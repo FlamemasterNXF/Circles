@@ -45,5 +45,5 @@ function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
     document.getElementById("descText").innerText = `Circle 2 multiplies the speed of Circle 1 as it fills. [${format(effect)}x]`
     document.getElementById("descText2").style.display = data.textTriggers[1]?`flex`:`none`
-    document.getElementById("descText2").innerText = `All circles above Circle 2 multiply the effect of the previous Circle.\nCurrent multiplier to Circle 2: ${format(higherEffects[0])}x`
+    document.getElementById("descText2").innerText = `All circles above Circle 2 multiply the effect of the previous Circle. [${format(higherEffects[0])}x]`
 }

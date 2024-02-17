@@ -60,7 +60,6 @@ window.onload = function (){
     load()
     fixNumbers()
     setupBars(data.numbers.length-1)
-    higherEffectsSetup()
 }
 //full reset
 function fullReset(){

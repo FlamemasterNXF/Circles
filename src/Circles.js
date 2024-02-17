@@ -1,12 +1,6 @@
 let effect = D(1)
-let higherEffects = []
-function higherEffectsSetup(){
-    let i=0
-    while (i<100){
-        higherEffects.push(D(1))
-        i++
-    }
-}
+let higherEffects = Array(10).fill(D(1))
+
 function calcCircleEffects(){
     if(data.numbers[1]!==undefined){
         effect = (data.numbers[1].sqrt()).times(higherEffects[0])
