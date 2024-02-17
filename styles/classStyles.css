@@ -13,6 +13,11 @@
     text-align: center;
     animation: fadeIn normal 7s;
 }
+.centeredTextsNA{
+    color: white;
+    font-family: DosisLight;
+    text-align: center;
+}
 .layer{
     position: absolute;
     z-index: 1;

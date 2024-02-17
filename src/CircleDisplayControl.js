@@ -41,9 +41,20 @@ function setupBars(x){
         }
     }
 }
+
+function makeCircleEffectText(){
+    let string = ""
+    for (let i = 2; i < data.numbers.length; i++) {
+        string += `Circle ${i+1} (${formatWhole(data.numbers[i])}%): ${format(higherEffects[i-2])}x to the Circle ${i} effect.\n`
+    }
+    return string
+}
+
 function circleTextControls(){
     document.getElementById("descText").style.display = data.textTriggers[0]?`flex`:`none`
-    document.getElementById("descText").innerText = `Circle 2 multiplies the speed of Circle 1 as it fills. [${format(effect)}x]`
-    document.getElementById("descText2").style.display = data.textTriggers[1]?`flex`:`none`
-    document.getElementById("descText2").innerText = `All circles above Circle 2 multiply the effect of the previous Circle. [${format(higherEffects[0])}x]`
+    document.getElementById("descText").innerText = `Circle 2 (${formatWhole(data.numbers[1])}%) provides a ${format(effect)}x multiplier to the speed of Circle 1.`
+    document.getElementById("descText2").style.display = data.textTriggers[1]?`block`:`none`
+    document.getElementById("descText2").innerHTML = `All circles above Circle 2 multiply the effect of the previous Circle.<br><span style="font-size: 14px">Hover for more info.</span>`
+
+    DOM(`descText3`).innerText = makeCircleEffectText()
 }

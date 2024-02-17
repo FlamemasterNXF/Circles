@@ -12,9 +12,9 @@ function gainNumber(lowestGain){
                 data.numbers[1] = data.numbers[1].plus(lowestGain.div(100))
                 numberReset(1)
                 // console.log(`It is now ${data.numbers[1]}`)
-                continue
-            }
 
+                continue // Ensure that Circle 2 is only increased once per loop
+            }
 
             data.numbers[i+1] = data.numbers[i+1].plus(1)
             numberReset(i+1)
