@@ -19,7 +19,7 @@ function load() {
 }
 //fix saves
 function fixSave(main=getDefaultObject(), data) {
-    if (typeof data === "object") {
+    if (typeof data === "object" && data !== null) {
         Object.keys(data).forEach(i => {
             if (main[i] instanceof Decimal) {
                 main[i] = D(data[i]!==null?data[i]:main[i])
