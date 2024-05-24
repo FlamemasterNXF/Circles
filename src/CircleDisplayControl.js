@@ -23,8 +23,8 @@ function createBars(su=false){
         container.appendChild(newBar)
         newBar.appendChild(prevBar)
         if (!su){
-            for(let i=0;i<data.numbers.length;i++) data.numbers[i] = D(1)
             data.numbers.push(new Decimal(1))
+            for(let i=0;i<data.numbers.length;i++) data.numbers[i] = minimumNumber(i)
         }
         progressValues.push(new Decimal(1))
         progressBars.push(newBar)
@@ -57,4 +57,7 @@ function circleTextControls(){
     document.getElementById("descText2").innerHTML = `All circles above Circle 2 multiply the effect of the previous Circle.<br><span style="font-size: 0.9rem">Hover for more info.</span>`
 
     DOM(`descText3`).innerText = makeCircleEffectText()
+
+    DOM(`descText4`).style.display = data.numbers.length > 5 ? `block` : `none`
+    document.getElementById("descText4").innerText = `Circle 6 (${formatWhole(data.numbers[5])}%) increases the minimum percent of all lower Circles by ${format(minimumNumber(0).sub(1))}%`
 }

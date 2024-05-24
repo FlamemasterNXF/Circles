@@ -18,13 +18,17 @@ function gainNumber(lowestGain){
 
             data.numbers[i+1] = data.numbers[i+1].plus(1)
             numberReset(i+1)
-
         }
     }
 }
+
+let minimumNumber = (i) => i < 5
+    ? data.numbers[5] !== undefined ? data.numbers[5].plus(1) : D(1)
+    : D(1)
 function numberReset(x){
-    for(let i=0;i<x;i++) data.numbers[i] = D(1)
+    for(let i=0;i<x;i++) data.numbers[i] = minimumNumber(i)
 }
+
 function mainLoop(){
     diff = (Date.now()-data.time)/1000
     data.time = Date.now()
